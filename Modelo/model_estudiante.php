@@ -54,7 +54,7 @@
             $sql = "call SP_LISTAR_CIUDAD_NAC()";
             $arreglo = array();
             if ($consulta = $this->conexion->conexion->query($sql)) {
-                while ($consulta_VU = mysqli_fetch_array($consulta)) {
+                while ($consulta_VU = mysqli_fetch_array($consulta)) {// mysqli_fetch_assoc arreglo como matriz
                     
                         $arreglo[] = $consulta_VU;
                     
